@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #000000;
+    color: #0c0c0c;
 }
 .section {
     padding-top: 50px;
@@ -36,14 +37,58 @@ body {
     line-height: 45px;
 }
 
+/* Modal window */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.modal__content {
+    position: relative;
+    top: 20%;
+    margin: auto;
+    width: 100%;
+    height: min-content;
+    max-width: 400px;
+    padding: 36px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px #0c0c0c;
+}
+
+.input-field {
+    margin-bottom: 24px;
+    width: 100%;
+    height: 40px;
+}
+
+.button_primary {
+    margin-bottom: 12px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal__close {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
 /* Header */
-
 .header__promo {
     position: relative;
     width: 100%;
     height: 600px;
-    background-color: #000000;
+    background-color: #0c0c0c;
     background-image: url("./../image/bg.png");
     background-size: 100%;
     background-position: center 25%;
@@ -64,7 +109,6 @@ body {
     color: #ffffff;
 }
 .section__thumbnail {
-    padding-bottom: 15px;
     display: block;
     margin: auto;
 }
@@ -133,8 +177,8 @@ body {
 .about__inner {
     width: 350px;
     text-align: center;
-    border-left: solid 4px #000000;
-    border-right: solid 4px #000000;
+    border-left: solid 4px #0c0c0c;
+    border-right: solid 4px #0c0c0c;
 }
 .about__tagline {
     margin-top: 50px;
@@ -146,7 +190,7 @@ body {
 
 .section__masters {
     width: 100%;
-    background-color: #000000;
+    background-color: #0c0c0c;
     background-image: url("./../image/bg-gallery.png");
     background-size: 100%;
     background-position: center center;
@@ -210,7 +254,7 @@ body {
 .section__piercing {
     width: 100%;
     padding-bottom: 70px;
-    background-color: #000000;
+    background-color: #0c0c0c;
     background-image: url("./../image/bg-pircing.png");
     background-size: 100%;
     background-position: center center;
@@ -241,7 +285,7 @@ body {
 }
 .subscribtion__link{
     text-decoration: none;
-    color: #000000;
+    color: #0c0c0c;
 }
 .form {
     margin-bottom: 50px;
@@ -254,7 +298,7 @@ body {
     margin-bottom: 10px;
     padding: 5px 15px;
     box-sizing: border-box;
-    border: 4px solid #000000;
+    border: 4px solid #0c0c0c;
     width: 550px;
 }
 .form__input:focus, .form__textarea:focus {
@@ -263,12 +307,12 @@ body {
 .form__input[placeholder], .form__textarea {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
-    color: #000000;
+    color: #0c0c0c;
 }
 .form__textarea {
     resize: none;
 }
-.form__btn {
+.button {
     float: right;
     width: 150px;
     padding: 15px 0;
@@ -279,7 +323,7 @@ body {
     color: #ffffff;
     font-size: 15px;
 }
-.form__btn:hover {
+.button:hover {
     background-color: #131313;
 }
 .form::after {
@@ -290,8 +334,8 @@ body {
 .maps {
     width: 100%; 
     height: 550px;
-    border: 1px solid #000;
-    filter: grayscale(80%);
+    border: 1px solid #0c0c0c;
+    filter: grayscale(50%);
 }
 
 /* Footer */
@@ -299,7 +343,7 @@ body {
 .footer {
     position: fixed;
     bottom: 60px;
-    z-index: 1000;
+    z-index: 10;
     width: 100%;
     height: 80px;
     background-color: #131313;

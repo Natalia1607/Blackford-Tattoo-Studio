@@ -23,3 +23,16 @@ const nextSlide = () => {
 };
 
 setInterval(nextSlide, 4000);
+
+/* modal */
+const openModal = document.querySelector('#button_open');
+const closeModal = document.querySelector('#button_close');
+const modalWindow = document.querySelector('.modal');
+
+openModal.onclick = function(e) {
+    modalWindow.style.display = "block";
+};
+
+closeModal.onclick = function() {
+    modalWindow.style.display = "none";
+};
